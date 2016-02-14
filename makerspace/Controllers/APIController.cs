@@ -32,10 +32,10 @@ namespace makerspace.Controllers
 
         }
 
-        private List<T> List_Filter_Sort_Page_Get<T>(List<T> list, JObject params_jsoned, string[] return_columns)
+        private List<T> List_Filter_Sort_Page_Get<T>(List<T> list, JObject params_jsoned, string[] filter_columns, string[] return_columns)
         {
-
-
+            if (params_jsoned == null)
+                params_jsoned = new JObject();
             /* sorting */
             /*
             var prop_info = typeof(T).GetProperties()[0]; //hopefully this defaults to id column appropriately.
@@ -53,10 +53,18 @@ namespace makerspace.Controllers
             
             //new Object(){id}
             Paging paging = Paging_Get(params_jsoned);
+            string filter = "1=1";
+            foreach (string item in filter_columns)
+            {
+                if (!String.IsNullOrEmpty(Convert.ToString(params_jsoned[item])))
+                    filter += " and " + item + "=\"" + params_jsoned[item] + "\"";
+            }
             return list
-                .OrderBy("0")
+                .Where(filter)
+                .OrderBy(Convert.ToString(params_jsoned["order_by"] ?? "0"))
                 //.OrderBy(item => prop_info.GetValue(item, null))
                 .Skip(paging.Page_Size * (paging.Page - 1)).Take(paging.Page_Size)
+                .Select<dynamic>("new (id as id, title as title)")
                 /*.Select(
                     item => new T{
                     id = 0,//prop_info.GetValue("title", null),
@@ -64,8 +72,7 @@ namespace makerspace.Controllers
                     //id = item.id,
                     requirement_age = 0//item.requirement_age
                 })*/
-                
-                //.AsEnumerable<T>()
+                //.().
                 .ToList<T>();
                 
         }
@@ -92,8 +99,9 @@ namespace makerspace.Controllers
             JObject params_jsoned = JsonConvert.DeserializeObject<JObject>(params_json ?? "{}");
             
             App_Model app_model = new App_Model();
+            string[] filter_columns = new string[] { "id", "title" };
             string[] return_columns = new string[]{"id","title"};
-            var list = List_Filter_Sort_Page_Get<App_Areas>(app_model.App_Areas.ToList<App_Areas>(), params_jsoned, return_columns);
+            var list = List_Filter_Sort_Page_Get<App_Areas>(app_model.App_Areas.ToList<App_Areas>(), params_jsoned, filter_columns, return_columns);
             /*var list = Paged_Get<App_Areas>(params_jsoned, app_model.App_Areas.ToList<App_Areas>())
                 //.Where(item => item.id == 1)
 ;
