@@ -1,0 +1,165 @@
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\makerspace.dll.config
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\makerspace.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\makerspace.pdb
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Antlr3.Runtime.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\EntityFramework.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\EntityFramework.SqlServer.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Microsoft.Owin.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Microsoft.Owin.Security.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Microsoft.Owin.Security.Google.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Microsoft.Web.Infrastructure.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Newtonsoft.Json.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Owin.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\System.Web.Helpers.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\System.Web.Mvc.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\System.Web.Optimization.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\System.Web.Razor.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\System.Web.WebPages.Deployment.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\System.Web.WebPages.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\System.Web.WebPages.Razor.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\WebGrease.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\System.Web.Helpers.xml
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\System.Web.Mvc.xml
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\System.Web.Optimization.xml
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\System.Web.Razor.xml
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\System.Web.WebPages.xml
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\System.Web.WebPages.Deployment.xml
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\System.Web.WebPages.Razor.xml
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Antlr3.Runtime.pdb
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Newtonsoft.Json.xml
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\EntityFramework.xml
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\EntityFramework.SqlServer.xml
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Microsoft.Owin.xml
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Microsoft.Owin.Security.xml
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Microsoft.Owin.Security.Google.xml
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\obj\Debug\makerspace.csprojResolveAssemblyReference.cache
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\obj\Debug\makerspace.dll
+c:\users\kel\documents\visual studio 2013\Projects\makerspace\makerspace\obj\Debug\makerspace.pdb
+C:\Users\kel\Desktop\makerspace\makerspace\bin\makerspace.dll.config
+C:\Users\kel\Desktop\makerspace\makerspace\bin\makerspace.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\makerspace.pdb
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Antlr3.Runtime.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\EntityFramework.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\EntityFramework.SqlServer.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Microsoft.Owin.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Microsoft.Owin.Security.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Newtonsoft.Json.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Owin.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\System.Web.Helpers.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\System.Web.Mvc.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\System.Web.Optimization.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\System.Web.Razor.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\System.Web.WebPages.Deployment.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\System.Web.WebPages.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\System.Web.WebPages.Razor.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\WebGrease.dll
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Antlr3.Runtime.pdb
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Newtonsoft.Json.xml
+C:\Users\kel\Desktop\makerspace\makerspace\bin\System.Web.Helpers.xml
+C:\Users\kel\Desktop\makerspace\makerspace\bin\System.Web.Mvc.xml
+C:\Users\kel\Desktop\makerspace\makerspace\bin\System.Web.Optimization.xml
+C:\Users\kel\Desktop\makerspace\makerspace\bin\System.Web.Razor.xml
+C:\Users\kel\Desktop\makerspace\makerspace\bin\System.Web.WebPages.xml
+C:\Users\kel\Desktop\makerspace\makerspace\bin\System.Web.WebPages.Deployment.xml
+C:\Users\kel\Desktop\makerspace\makerspace\bin\System.Web.WebPages.Razor.xml
+C:\Users\kel\Desktop\makerspace\makerspace\bin\EntityFramework.xml
+C:\Users\kel\Desktop\makerspace\makerspace\bin\EntityFramework.SqlServer.xml
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Microsoft.Owin.xml
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Microsoft.Owin.Security.xml
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\kel\Desktop\makerspace\makerspace\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\kel\Desktop\makerspace\makerspace\obj\Debug\makerspace.dll
+C:\Users\kel\Desktop\makerspace\makerspace\obj\Debug\makerspace.pdb
+C:\Users\kel\Desktop\makerspace\makerspace\obj\Debug\makerspace.csprojResolveAssemblyReference.cache
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\obj\Debug\makerspace.csprojResolveAssemblyReference.cache
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\makerspace.dll.config
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\makerspace.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\makerspace.pdb
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Antlr3.Runtime.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\EntityFramework.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\EntityFramework.SqlServer.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Microsoft.Owin.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Microsoft.Owin.Security.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Newtonsoft.Json.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Owin.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\System.Web.Helpers.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\System.Web.Mvc.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\System.Web.Optimization.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\System.Web.Razor.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\System.Web.WebPages.Deployment.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\System.Web.WebPages.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\System.Web.WebPages.Razor.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\WebGrease.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Antlr3.Runtime.pdb
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Newtonsoft.Json.xml
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\System.Web.Helpers.xml
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\System.Web.Mvc.xml
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\System.Web.Optimization.xml
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\System.Web.Razor.xml
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\System.Web.WebPages.xml
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\System.Web.WebPages.Deployment.xml
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\System.Web.WebPages.Razor.xml
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\EntityFramework.xml
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\EntityFramework.SqlServer.xml
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Microsoft.Owin.xml
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Microsoft.Owin.Security.xml
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\obj\Debug\makerspace.dll
+C:\Users\kel\Desktop\MakerSpace-fb4040b6fca39a62b2a518f698da024ef7bb7069\makerspace\obj\Debug\makerspace.pdb

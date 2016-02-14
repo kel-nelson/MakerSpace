@@ -1,0 +1,46 @@
+﻿@model makerspace.Models.App_User_Area_Memberships
+@using makerspace.Models
+@{
+    ViewBag.Title = "Area Membership Add/Edit";
+
+    
+    //List<App_User_Profiles> users = ViewData["users"] as List<App_User_Profiles>;
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>@ViewBag.Title</h2>
+    </div>
+</div>
+<p class="text-warning">
+    Warning: Demo app, all logged in users have access to this dashboard.
+</p>
+
+@using (Html.BeginForm("AreaMemberships_AddEdit", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+    @Html.TextBoxFor(m => m.id, new { @class = "form-control", @type="hidden" })
+    <div class="form-group">
+        <label for="user_id" class="col-md-2 control-label">Member</label>
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.user_id, new SelectList(ViewData["users"] as IQueryable, "id", "name"), "Select One", new { @class = "form-control"})
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="user_id" class="col-md-2 control-label">Area</label>
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.area_id, new SelectList(ViewData["areas"] as IQueryable, "id", "title"), "Select One", new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="user_id" class="col-md-2 control-label">Membership Type</label>
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.membership_type_id, new SelectList(ViewData["membership_types"] as IQueryable, "id", "title"), "Select One", new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+}

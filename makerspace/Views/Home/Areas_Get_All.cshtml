@@ -1,0 +1,81 @@
+﻿@using makerspace.Models;
+@{
+    //List<App_Areas> areas_list = ViewData["areas"] as List<App_Areas>;   
+    App_User_Profiles app_user_profile = ViewData["user_profile"] as App_User_Profiles;
+    int my_age = 0;
+    if (Request.IsAuthenticated && app_user_profile != null){
+        my_age = makerspace.Utils.User_Utils.Calc_Age(app_user_profile.birthdate);
+    }
+}
+<h3>Maker Space Areas</h3>
+<ul class="list-inline">
+    @foreach (App_Areas area in (ViewData["areas"] as IQueryable))
+    {
+
+
+        <li class="col-md-4">
+            <div id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab">
+                        <div class="panel-title row">
+                            <div class="col-md-8">
+                                <h3 class="pull-left" style="margin-top:0;">
+                                    @area.title
+                                    @if (@area.App_User_Area_Memberships.Count() > 0)
+                                    {
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse_area_@area.id" style="text-decoration:none;" aria-expanded="true">
+                                            <span data-toggle="tooltip" title="Contains @area.App_User_Area_Memberships.Count() Members">
+                                                (@area.App_User_Area_Memberships.Count())
+                                            </span>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <text>(0)</text>
+                                    }
+                                </h3>
+                                @if (area.requirement_age != null && area.requirement_age > 0)
+                                {
+                                    <a href="#" class="pull-left" style="text-decoration:none;margin-left:8px;" data-toggle="tooltip" data-placement="right" title="Must be age of at least @area.requirement_age years.">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    </a>
+                                }
+                            </div>
+                            <div class="col-md-4">
+                                <div class="pull-right">
+                                    @if (Request.IsAuthenticated)
+                                    {
+                                        string age_error_message = null;
+                                        if ((area.requirement_age != null) && (my_age < area.requirement_age))
+                                        {
+                                            age_error_message = String.Format("Sorry, you are {0} years old, you need to be {1} years older.", my_age, (area.requirement_age - my_age));
+                                        }
+                                        using (Html.BeginForm("AreaJoinAsMember", "Manage", new { area_id = area.id }, FormMethod.Post))
+                                        {
+                                            <button class="btn btn-primary btn-md" style="width:90px;" @(String.IsNullOrEmpty(age_error_message) ? "" : "disabled") title="@age_error_message">
+                                                Join
+                                                <span class="glyphicon glyphicon-exclamation-sign" style="@(String.IsNullOrEmpty(age_error_message) ? "display:none;" : "" )"></span>
+                                            </button>
+                                        }
+                                    }
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="panel-collapse collapse" role="tabpanel" id="collapse_area_@area.id">
+                        <ul>
+                            @foreach (App_User_Area_Memberships user_membership in @area.App_User_Area_Memberships)
+                            {
+                                <li>
+                                    @user_membership.App_User_Profiles.name (@user_membership.App_Membership_Types.title)
+                                </li>
+                            }
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </li>
+    }
+</ul>
