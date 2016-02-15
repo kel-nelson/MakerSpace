@@ -9,11 +9,17 @@
     }
 }
 <h3>Maker Space Areas</h3>
+@if (Request.IsAuthenticated && app_user_profile != null){
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="pull-left">Hello @app_user_profile.name,</h4>
+            <small class="pull-right">Looks like you are @my_age years old.</small>
+        </div>
+    </div>
+}
 <ul class="list-inline">
     @foreach (App_Areas area in (ViewData["areas"] as IQueryable))
     {
-
-
         <li class="col-md-4">
             <div id="accordion" role="tablist" aria-multiselectable="true">
                 <div class="panel panel-default">

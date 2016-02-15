@@ -26,8 +26,8 @@ namespace makerspace.App_Lib
 
             override public String ToString()
             {
-                //try
-                //{
+                try
+                {
                     string data_string = JsonConvert.SerializeObject(
                         Results.ToList(),
                         Formatting.Indented,
@@ -47,17 +47,17 @@ namespace makerspace.App_Lib
                         ""order_by"":""{3}"",
                         ""data"":{4}
                     }}", this.Paging.Page, this.Paging.Page_Size, this.Count, (this.Order_By ?? ""), data_string);
-                //}
-                //catch (Exception e) 
-                //{
+                }
+                catch (Exception e) 
+                {
                     //
                     //to-do: log real error somewhere.
                     //
-                    //System.Diagnostics.Debug.WriteLine(e.Message);
-                    //return String.Format(@"{{
-                        //""error"":""{0}""
-                    //}}", "Unable to get data.");
-                //}
+                    System.Diagnostics.Debug.WriteLine(e.Message);
+                    return String.Format(@"{{
+                        ""error"":""{0}""
+                    }}", "Unable to get data.");
+                }
             }
         }
     }

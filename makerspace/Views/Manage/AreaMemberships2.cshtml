@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<makerspace.Models.App_User_Area_Memberships>
 
 @{
-    ViewBag.Title = "View Area Memberships";
+    ViewBag.Title = "View Area Memberships (jquery grid)";
     string app_url = Url.Content("~/");
 }
 
@@ -31,7 +31,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" onclick="Submit_Edit()">Save changes</button>
+                <button type="button" class="btn btn-primary" onclick="Submit_Save()">Save changes</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -51,8 +51,9 @@
 </p>
 <p>
     <button id="add_new" class="btn btn-primary btn-md" onclick="Edit()">Add New</button>
+    <button id="refresh" class="btn btn-primary btn-md pull-right" onclick="refresh_data()"><i class="fa fa-refresh"></i></button>
 </p>
-<table id="data_grid">
+<table id="data_grid" class="table">
 </table>
 
 @section scripts {
@@ -95,14 +96,36 @@
                 });
 
             });
-            refresh();
+            init_data();
+            refresh_data();
         }
 
-        function Submit_Edit() {
-            var form = $("#edit").find("form");
+        function Submit_Save() {
 
-            edit_dialog.modal("hide");
-            refresh();
+            var form_data = JSON.stringify({
+                id: form_edit.find("[name='id']").val() || 0,
+                area_id: form_edit.find("[name='area_id']").val(),
+                user_id: form_edit.find("[name='user_id']").val(),
+                membership_type_id: form_edit.find("[name='membership_type_id']").val()
+            });
+
+            $.ajax(
+                {
+                    url: base_url + "api/App_User_Area_Memberships_AddUpdate",
+                    method: "POST",
+                    data: "params_json=" + form_data
+                }
+            )
+            .done(function (response) {
+                if (response.success) {
+                    edit_dialog.modal("hide");
+                    refresh_data();
+                }
+                else
+                    alert(response.message);
+            });
+
+
         }
 
         function Edit(e) {
@@ -116,66 +139,77 @@
             }
 
             if (e.data.id > 0) {
-                var form = $("#edit").find("form");
-                var form_data = JSON.stringify({ "filter": { "id": +e.data.id } });
-                $.ajax(
-                    {
-                        url: base_url + "api/App_User_Area_Memberships_Get",
-                        method: "POST",
-                        data: "params_json=" + form_data
-                    }
-                )
-                .done(function (data) {
-                    var data = data.data[0];
-                    if(data){
-                        //console.log(form_edit.find("[name='id']"));
-                        //console.log(data.id);
+                var on_success = (function (response) {
+                    var data = response.data[0];
+                    if (data) {
                         form_edit.find("[name='id']").val(data.id);
                         form_edit.find("[name='area_id']").val(data.area_id);
                         form_edit.find("[name='user_id']").val(data.user_id);
                         form_edit.find("[name='membership_type_id']").val(data.membership_type_id);
                     }
                 });
+
+                var form_data = JSON.stringify({ "filter": { "id": +e.data.id } });
+                $.ajax(
+                    {
+                        url: base_url + "api/App_User_Area_Memberships_Get",
+                        method: "POST",
+                        data: "params_json=" + form_data,
+                        success: on_success
+                    }
+                )
+
             }
             
         }
 
         function Delete(e) {
+
+            var on_success = (function (response) {
+                if (response.success)
+                    refresh_data();
+                else
+                    alert(response.message);
+
+            });
+
             if (confirm("Delete Record: Are you sure?")) {
                 var form_data = JSON.stringify({"id": + e.data.id});
                 $.ajax(
                     {
                         url: base_url + "api/App_User_Area_Memberships_Delete",
                         method: "POST",
-                        data:"params_json=" + form_data
+                        data: "params_json=" + form_data,
+                        success: on_success
                     }
                 )
-                .done(function (data) {
-                    alert(data.message);
-                    refresh();
-                });
             }
         }
 
-        function refresh() {
-            $.getJSON(base_url + "api/App_User_Area_Memberships_Get", function (data) {
-                data_grid.grid({
-                    dataKey: "id",
-                    uiLibrary: "bootstrap",
-                    columns: [
-                        { title: "", field: "Edit", width: 20, type: "icon", icon: "btn btn-primary btn-md fa fa-pencil", tooltip: "Edit", events: { "click": Edit } },
-                        { title: "", field: "Delete", width: 20, type: "icon", icon: "btn btn-primary btn-md fa fa-times", tooltip: "Delete", events: { "click": Delete } },
-                        { field: "id", width: 45 },
-                        { field: "App_Area_Title", title:"Area"},
-                        { field: "App_User_Profile_Name", title: "Name"},
-                        { field: "App_Membership_Types_Title", title: "Membership Type", },
-                    ],
-                    modal: true,
-                    dataSource: data.data
-                })
-                
-            });
+        function refresh_data() {
+            data_grid.reload();
+        }
+        
+        function init_data() {
 
+            var on_success = function (response) {
+                data_grid.render(response.data);
+            }
+
+            data_grid = data_grid.grid({
+                dataKey: "id",
+                //uiLibrary: "bootstrap",
+                columns: [
+                    { title: "", field: "Edit", width: 20, type: "icon", icon: "btn btn-primary btn-md fa fa-pencil", tooltip: "Edit", events: { "click": Edit } },
+                    { title: "", field: "Delete", width: 20, type: "icon", icon: "btn btn-primary btn-md fa fa-times", tooltip: "Delete", events: { "click": Delete } },
+                    { field: "id", title:"Id", width: 45 },
+                    { field: "App_Area_Title", title:"Area"},
+                    { field: "App_User_Profile_Name", title: "Name"},
+                    { field: "App_Membership_Types_Title", title: "Membership Type", },
+                ],
+                dataSource: {url: base_url + "api/App_User_Area_Memberships_Get", success: on_success},
+                modal: true
+            });
         }
         $(window).ready(init);
     </script>
