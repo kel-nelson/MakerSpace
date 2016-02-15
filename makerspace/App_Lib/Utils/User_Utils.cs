@@ -7,7 +7,7 @@ using Microsoft.AspNet.Identity;
 
 using makerspace.Models;
 
-namespace makerspace.Utils
+namespace makerspace.App_Lib.Utils
 {
     public static class User_Utils
     {

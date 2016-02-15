@@ -8,7 +8,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using makerspace.Models;
 
-using makerspace.Utils;
+using makerspace.App_Lib.Utils;
 namespace makerspace.Controllers
 {
     [Authorize]
@@ -381,7 +381,7 @@ namespace makerspace.Controllers
         {
             try
             {
-                Utils.User_Utils.AreaMemberships_AddEdit(area_id, membership_type_id, user_id, id);
+                App_Lib.Utils.User_Utils.AreaMemberships_AddEdit(area_id, membership_type_id, user_id, id);
             }
             catch (Exception e)
             {
@@ -402,6 +402,11 @@ namespace makerspace.Controllers
             return RedirectToAction("AreaMemberships", "Manage");
         }
 
+        // GET: /Manage/AreaMemberships2
+        public ActionResult AreaMemberships2()
+        {
+            return View();
+        }
 
 #region Helpers
         // Used for XSRF protection when adding external logins

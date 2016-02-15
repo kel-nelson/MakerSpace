@@ -4,7 +4,8 @@
     App_User_Profiles app_user_profile = ViewData["user_profile"] as App_User_Profiles;
     int my_age = 0;
     if (Request.IsAuthenticated && app_user_profile != null){
-        my_age = makerspace.Utils.User_Utils.Calc_Age(app_user_profile.birthdate);
+        my_age = makerspace.App_Lib.Utils.User_Utils.Calc_Age(app_user_profile.birthdate);
+
     }
 }
 <h3>Maker Space Areas</h3>

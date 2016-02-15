@@ -160,7 +160,6 @@ C:\Users\kel\Documents\Projects\MakerSpace\makerspace\bin\Microsoft.Owin.Securit
 C:\Users\kel\Documents\Projects\MakerSpace\makerspace\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\kel\Documents\Projects\MakerSpace\makerspace\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\kel\Documents\Projects\MakerSpace\makerspace\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\kel\Documents\Projects\MakerSpace\makerspace\obj\Debug\makerspace.csprojResolveAssemblyReference.cache
 C:\Users\kel\Documents\Projects\MakerSpace\makerspace\obj\Debug\makerspace.dll
 C:\Users\kel\Documents\Projects\MakerSpace\makerspace\obj\Debug\makerspace.pdb
-C:\Users\kel\Documents\Projects\MakerSpace\makerspace\bin\System.Linq.Dynamic.dll
+C:\Users\kel\Documents\Projects\MakerSpace\makerspace\obj\Debug\makerspace.csprojResolveAssemblyReference.cache

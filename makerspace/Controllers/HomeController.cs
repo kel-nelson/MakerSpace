@@ -6,7 +6,8 @@ using System.Web.Mvc;
 
 using Microsoft.AspNet.Identity;
 using makerspace.Models;
-using makerspace.Utils;
+using makerspace.App_Lib.Utils;
+
 namespace makerspace.Controllers
 {
     public class HomeController : Controller
