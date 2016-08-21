@@ -1,63 +1,89 @@
 ﻿@using makerspace.Models
+
+
 @model LoginViewModel
 @{
-    ViewBag.Title = "Log in";
+    ViewBag.Title = "Login";
 }
+<style rel="stylesheet">
+    .login_section{
+        min-height:290px;
+    }
 
-<h2>@ViewBag.Title.</h2>
-<div class="row">
-    <div class="col-md-8">
-        <section id="loginForm">
-            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-            {
-                @Html.AntiForgeryToken()
-                <h4>Use a local account to log in.</h4>
-                <hr />
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <div class="checkbox">
-                            @Html.CheckBoxFor(m => m.RememberMe)
-                            @Html.LabelFor(m => m.RememberMe)
+</style>
+
+<h2>@ViewBag.Title</h2>
+
+    <div class="row" ng-controller="loginDemo">
+        <div class="col-md-4 border-right login_section">
+            <h3>Local Account</h3>
+            <section id="loginForm">
+                @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Email, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @ng_model = "user_login.username" })
+                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
                         </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Log in" class="btn btn-default" />
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Password, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control", @ng_model = "user_login.password" })
+                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                        </div>
                     </div>
-                </div>
-                <p>
-                    @Html.ActionLink("Register as a new user", "Register")
-                </p>
-                @* Enable this once you have account confirmation enabled for password reset functionality
-                    <p>
-                        @Html.ActionLink("Forgot your password?", "ForgotPassword")
-                    </p>*@
-            }
-        </section>
-    </div>
-    <div class="col-md-4">
-        <section id="socialLoginForm">
-            @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
-        </section>
-    </div>
-</div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <div class="checkbox">
+                                @Html.CheckBoxFor(m => m.RememberMe)
+                                @Html.LabelFor(m => m.RememberMe)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="button" value="Reset" class="btn btn-default" ng-click="set_login('', '')" />
+                            <input type="submit" value="Log in >" class="btn btn-default pull-right" />
+                        </div>
+                    </div>
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+                    <a href="@Url.Action("Register")">
+                        Register as a new user
+                        <i class='fa fa-user-plus' aria-hidden='true'></i>
+                    </a>
+
+                    @Html.Raw("&nbsp;&nbsp;|&nbsp;&nbsp;");
+
+                    <a href="@Url.Action("ForgotPassword")">
+                        Forgot your password?
+                        <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    </a>
+
+                }
+            </section>
+        </div>
+        <div class="col-md-4 text-center border-right login_section">
+            <h3>Demo Accounts</h3>
+            <button class="btn btn-primary btn-md" style="width:240px;" ng-click="set_login('regular@makerspace.app', 'demo')"><i class="fa fa-arrow-circle-left"></i> Demo as Regular Member</button>
+            <br /><br />
+            <button class="btn btn-primary btn-md" style="width:240px;" ng-click="set_login('youngster@makerspace.app', 'demo')"><i class="fa fa-arrow-circle-left"></i> Demo as Youngster Member</button>
+            <br />
+            <small>(Limited Work Area Access - Under Age of 16)</small>
+        </div>
+        <div class="col-md-4 login_section">
+            <h3>External Sign-On</h3>
+            <div class="well">
+                Feature not available for this project.
+            </div>
+        </div>
+    </div>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+        @Scripts.Render("~/Scripts/ng-controllers/ng-login.js")
+    }

@@ -7,32 +7,37 @@
         my_age = makerspace.Utils.User_Utils.Calc_Age(app_user_profile.birthdate);
     }
 }
-<h3>Maker Space Areas</h3>
+<div class="row">
+    <div class="col-md-6">
+        <h2>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            Getting Started
+        </h2>
+    </div>
+    <div class="col-md-6">
+        <h3 class="pull-right" style="padding-top:8px;">
+            Workshop Areas
+        </h3>
+    </div>
+</div>
 <ul class="list-inline">
     @foreach (App_Areas area in (ViewData["areas"] as IQueryable))
     {
-
-
         <li class="col-md-4">
             <div id="accordion" role="tablist" aria-multiselectable="true">
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab">
-                        <div class="panel-title row">
+                        <div class="row">
                             <div class="col-md-8">
                                 <h3 class="pull-left" style="margin-top:0;">
-                                    @area.title
-                                    @if (@area.App_User_Area_Memberships.Count() > 0)
-                                    {
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse_area_@area.id" style="text-decoration:none;" aria-expanded="true">
+                                    <div class="panel-title">
+                                        <a data-toggle="collapse" class="collapsed" data-parent="#accordion" href="#collapse_area_@area.id" style="text-decoration:none;" aria-expanded="true">
+                                            @area.title
                                             <span data-toggle="tooltip" title="Contains @area.App_User_Area_Memberships.Count() Members">
                                                 (@area.App_User_Area_Memberships.Count())
                                             </span>
                                         </a>
-                                    }
-                                    else
-                                    {
-                                        <text>(0)</text>
-                                    }
+                                    </div>
                                 </h3>
                                 @if (area.requirement_age != null && area.requirement_age > 0)
                                 {

@@ -17,8 +17,23 @@
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
-input,
+/*input,
 select,
 textarea {
     max-width: 280px;
+}
+.padding-sm{
+    padding:2px;
+}
+.margin-sm{
+    margin:2px;
+}*/
+
+.border-right{
+    border-right:solid 1px #ddd;
+}
+
+a, a:link, a:focus, a:hover, a:visited {
+    text-decoration:none;
+    color:#125993;
 }

@@ -8,7 +8,7 @@ namespace makerspace.Models
     public partial class App_Model : DbContext
     {
         public App_Model()
-            : base("name=App_Model4")
+            : base("name=App_Model")
         {
         }
 

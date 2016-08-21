@@ -3,7 +3,7 @@
     ViewBag.Title = "Register";
 }
 
-<h2>@ViewBag.Title.</h2>
+<h2>@ViewBag.Title</h2>
 
 @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
@@ -21,11 +21,13 @@
         <label class="col-md-2 control-label">Birthdate</label>
         <div class="col-md-8">
             <strong>Day</strong>
-            @Html.TextBoxFor(m => m.Birthdate_Day, new { @class = "form-control", @style = "width:50px;", @placeholder = "00", @maxlength = "2" })
+            @Html.TextBoxFor(m => m.Birthdate_Day, new { @class = "form-control", @style = "width:50px;display:inline-block;", @placeholder = "00", @maxlength = "2" })
+            @Html.Raw("&nbsp;&nbsp;&nbsp;&nbsp;")
             <strong>Month</strong>
-            @Html.TextBoxFor(m => m.Birthdate_Month, new { @class = "form-control", @style = "width:50px;", @placeholder = "00", @maxlength = "2" })
+            @Html.TextBoxFor(m => m.Birthdate_Month, new { @class = "form-control", @style = "width:50px;display:inline-block;", @placeholder = "00", @maxlength = "2" })
+            @Html.Raw("&nbsp;&nbsp;&nbsp;&nbsp;")
             <strong>Year</strong>
-            @Html.TextBoxFor(m => m.Birthdate_Year, new { @class = "form-control", @style = "width:65px;", @placeholder = "0000", @maxlength = "4" })
+            @Html.TextBoxFor(m => m.Birthdate_Year, new { @class = "form-control", @style = "width:65px;display:inline-block;", @placeholder = "0000", @maxlength = "4" })
 </div>
     </div>
     <div class="form-group">

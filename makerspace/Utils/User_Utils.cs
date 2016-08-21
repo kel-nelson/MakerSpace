@@ -87,6 +87,11 @@ namespace makerspace.Utils
             return true;
         }
 
+        public static bool Account_Is_Demo(String username=null)
+        {
+            username = String.IsNullOrEmpty(username)?HttpContext.Current.User.Identity.GetUserName():username;
+            return MvcApplication.Demo_Accounts.Contains(username);
+        }
 
     }
 }

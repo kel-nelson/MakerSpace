@@ -4,9 +4,16 @@
     ViewBag.Title = "Error";
 }
 
-<h1 class="text-danger">Error.</h1>
-<h2 class="text-danger">An error occurred while processing your request.</h2>
-<h3>
-    @ViewBag.Error_Message
-</h3>
+<div class="well well-md">
+    <h2>
+        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Error
+    </h2>
+    <ul>
+        <li>
+            @ViewBag.Error_Message
+            <i class="fa fa-frown-o" aria-hidden="true"></i>
+        </li>
+    </ul>
+
+</div>
 

@@ -1,0 +1,28 @@
+﻿<div class="well well-md">
+        <h2>
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Sorry
+        </h2>
+    <ul>
+        <li>
+            @{
+                switch ((string)Convert.ToString(ViewData["Notice_Name"]))
+                {
+                    case "Demo_Feature_Disabled":
+                        <text>This feature is not available for Demo Accounts.</text>
+                        break;
+
+                    default:
+                    <text>This feature is not available.</text>
+                        break;
+                }
+            }
+            <i class="fa fa-frown-o" aria-hidden="true"></i>
+        </li>
+    </ul>
+
+
+
+</div>
+
+
+

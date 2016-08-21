@@ -10,8 +10,14 @@ namespace makerspace
 {
     public class MvcApplication : System.Web.HttpApplication
     {
+        public static List<string> Demo_Accounts = new List<string>();
         protected void Application_Start()
         {
+            foreach(String username in Convert.ToString(System.Configuration.ConfigurationManager.AppSettings["Demo_Accounts"]).Split(';'))
+            {
+                Demo_Accounts.Add(username);
+            }
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
