@@ -35,6 +35,9 @@
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - @App_Utils.App_Get_Title()</p>
+            <p>Code Repository @ <a href='@App_Utils.App_Setting_Get("App_Repo")'>
+                @App_Utils.App_Setting_Get("App_Repo")</a>
+            </p>
         </footer>
     </div>
 

@@ -19,6 +19,8 @@ namespace makerspace.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.HasDefaultSchema("makerspace");
+
             modelBuilder.Entity<App_Areas>()
                 .Property(e => e.title)
                 .IsUnicode(false);

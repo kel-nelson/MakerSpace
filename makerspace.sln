@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "makerspace", "makerspace\makerspace.csproj", "{DE03CB6E-27B3-4550-95F9-F814BC4AFDB0}"
 EndProject
@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{A6C239
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "makerspace_db", "..\..\Documents\Visual Studio 2015\Projects\makerspace_db\makerspace_db.sqlproj", "{5A783983-567F-48A6-92D2-8B3495B08BEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,6 +24,12 @@ Global
 		{DE03CB6E-27B3-4550-95F9-F814BC4AFDB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE03CB6E-27B3-4550-95F9-F814BC4AFDB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE03CB6E-27B3-4550-95F9-F814BC4AFDB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A783983-567F-48A6-92D2-8B3495B08BEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A783983-567F-48A6-92D2-8B3495B08BEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A783983-567F-48A6-92D2-8B3495B08BEC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5A783983-567F-48A6-92D2-8B3495B08BEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A783983-567F-48A6-92D2-8B3495B08BEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A783983-567F-48A6-92D2-8B3495B08BEC}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -30,5 +30,11 @@ namespace makerspace.Models
         {
             return new ApplicationDbContext();
         }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.HasDefaultSchema("makerspace");
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
