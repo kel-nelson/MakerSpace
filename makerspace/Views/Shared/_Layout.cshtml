@@ -34,10 +34,37 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - @App_Utils.App_Get_Title()</p>
-            <p>Code Repository @ <a href='@App_Utils.App_Setting_Get("App_Repo")'>
-                @App_Utils.App_Setting_Get("App_Repo")</a>
-            </p>
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="page-header">Project</h4>
+                    &copy; @DateTime.Now.Year @App_Utils.App_Get_Title() v.@App_Utils.App_Setting_Get("App.Version")<br />
+                    Project Repository
+                    <ul>
+                        <li>
+                            @Html.Raw("&nbsp;&nbsp;&nbsp;&nbsp;")
+                            <a href="@App_Utils.App_Setting_Get("App.Repo")">
+                                @App_Utils.App_Setting_Get("App.Repo")
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <h4 class="page-header">Developer</h4>
+                    @App_Utils.App_Setting_Get("App.Contact.Name")
+                    <ul>
+                        <li>
+                            <a href="@App_Utils.App_Setting_Get("App.Contact.URL")">
+                                @App_Utils.App_Setting_Get("App.Contact.URL")
+                            </a>
+                        </li>
+                        <li>
+                            @App_Utils.App_Setting_Get("App.Contact.Location")<br />
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
         </footer>
     </div>
 

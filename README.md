@@ -1,6 +1,14 @@
 # MakerSpace
 ##Vanity Demo Project
 
+##Developer
+Kelly Nelson
+http://www.kelnet.tech
+
+##Demo Site 
+http://kel-makerspace.azurewebsites.net/
+
+##Description
 A makerspace (community shop) needs to track which members and shop stewards can work in which areas of the shop.  
 The space has 6 member areas:
  1. 3D Printing

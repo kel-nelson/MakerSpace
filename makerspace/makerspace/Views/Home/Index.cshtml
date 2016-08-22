@@ -1,0 +1,87 @@
+﻿@using makerspace.Models;
+@{
+    ViewBag.Title = "Maker Space Workshops Areas";
+    //Area_User_Memberships area_list = ViewData["area_list"] as Area_User_Memberships;
+    //List<Area_User_Memberships> area_list = ViewData["area_list"] as List<Area_User_Memberships>;
+}
+
+<style>
+    .panel-title > a:before {
+        font-family: FontAwesome;
+        content: "\f13a";
+        padding-right: 5px;
+    }
+
+    .panel-title > a.collapsed:before {
+        content: "\f138";
+    }
+
+    .panel-title > a:hover,
+    .panel-title > a:active,
+    .panel-title > a:focus {
+        text-decoration: none;
+    }
+</style>
+
+<div class="row">
+    <div class="col-md-6">
+    </div>
+    <div class="col-md-6">
+        <h3 class="pull-right">Vanity Demo Project</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <div class="panel-title">
+                        <a data-toggle="collapse" class="collapsed" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Project Requirements
+                        </a>
+                    </div>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        <h3>Description</h3>
+                        <p>
+                            A makerspace (community shop) needs to track which members and shop stewards can work in which areas of the shop.<br>
+                            The space has 6 member areas:
+                        </p>
+
+                        <ol>
+                            <li>3D Printing</li>
+                            <li>Laser Cutting</li>
+                            <li>Wood Shop</li>
+                            <li>Metal Shop</li>
+                            <li>Electronics</li>
+                            <li>Textile</li>
+                        </ol>
+
+                        <h3>Requirements</h3>
+
+                        <ul>
+                            <li>Each area has a shop steward (manager) that can oversee multiple areas. </li>
+                            <li>The wood shop, metal shop and textile areas require you must be at least 16 years old to work there.<br></li>
+                            <li>Members and stewards can work in multiple areas once they have been trained for that particular area.</li>
+                        </ul>
+
+                        <h3>Tasks:</h3>
+
+                        <ul>
+                            <li>Create a data model that will support what is described above.</li>
+                            <li>Implement this data model using Visual Studio to create a web application that will allow someone to view all members, and view departments.  Enroll new members and stewards, edit existing, and remove.  You must be able to assign members to areas.</li>
+                            <li>Incorporate use of .NET MVC, LINQ, Bootstrap and jQuery.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        @Html.Partial("Areas_Get_All")
+    </div>
+
+</div>

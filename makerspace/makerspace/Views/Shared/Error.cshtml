@@ -1,0 +1,19 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    ViewBag.Title = "Error";
+}
+
+<div class="well well-md">
+    <h2>
+        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Error
+    </h2>
+    <ul>
+        <li>
+            @ViewBag.Error_Message
+            <i class="fa fa-frown-o" aria-hidden="true"></i>
+        </li>
+    </ul>
+
+</div>
+
