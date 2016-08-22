@@ -1,5 +1,4 @@
-# MakerSpace
-##Vanity Demo Project
+# MakerSpace - Vanity Demo Project
 
 ##Developer
 Kelly Nelson
